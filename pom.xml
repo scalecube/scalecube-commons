@@ -22,21 +22,8 @@
     <tag>HEAD</tag>
   </scm>
 
-  <properties>
-    <reactor.version>Californium-SR8</reactor.version>
-  </properties>
-
   <dependencyManagement>
-
     <dependencies>
-      <!-- Reactor -->
-      <dependency>
-        <groupId>io.projectreactor</groupId>
-        <artifactId>reactor-bom</artifactId>
-        <version>${reactor.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -85,12 +72,4 @@
       <url>http://jcenter.bintray.com</url>
     </pluginRepository>
   </pluginRepositories>
-
-  <dependencies>
-    <dependency>
-      <groupId>io.projectreactor</groupId>
-      <artifactId>reactor-core</artifactId>
-    </dependency>
-  </dependencies>
-
 </project>
