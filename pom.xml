@@ -40,7 +40,7 @@
       </snapshots>
       <id>bintray</id>
       <name>bintray</name>
-      <url>http://jcenter.bintray.com</url>
+      <url>https://jcenter.bintray.com</url>
     </repository>
     <repository>
       <snapshots>
@@ -48,7 +48,7 @@
       </snapshots>
       <id>central</id>
       <name>central</name>
-      <url>http://repo1.maven.org</url>
+      <url>https://repo1.maven.org</url>
     </repository>
   </repositories>
 
@@ -67,7 +67,7 @@
       </snapshots>
       <id>central</id>
       <name>bintray-plugins</name>
-      <url>http://jcenter.bintray.com</url>
+      <url>https://jcenter.bintray.com</url>
     </pluginRepository>
   </pluginRepositories>
 </project>
