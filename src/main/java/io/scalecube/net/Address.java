@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 public final class Address {
 
-  public static final Address NULL_ADDRESS = Address.create("null-host", 0);
+  public static final Address NULL_ADDRESS = Address.create("nullhost", 0);
 
   public static final Pattern ADDRESS_FORMAT = Pattern.compile("(?<host>^.*):(?<port>\\d+$)");
 
