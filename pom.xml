@@ -1,73 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
-  <artifactId>scalecube-commons</artifactId>
-  <version>1.0.8-SNAPSHOT</version>
 
   <parent>
     <groupId>io.scalecube</groupId>
     <artifactId>scalecube-parent-pom</artifactId>
-    <version>0.1.2-RC3</version>
+    <version>0.2.0</version>
   </parent>
 
+  <artifactId>scalecube-commons</artifactId>
+  <version>1.0.8-SNAPSHOT</version>
+  <packaging>jar</packaging>
   <name>scalecube-commons</name>
+
+  <repositories>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/scalecube/packages</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Packages</name>
+      <url>https://maven.pkg.github.com/exberry-io/${project.artifactId}</url>
+    </repository>
+  </distributionManagement>
+
   <scm>
     <url>https://github.com/scalecube/scalecube-commons</url>
-    <connection>scm:git:git@github.com:scalecube/scalecube-commons.git</connection>
-    <developerConnection>scm:git:git@github.com:scalecube/scalecube-commons.git
+    <connection>scm:git:https://github.com/scalecube/scalecube-commons.git</connection>
+    <developerConnection>scm:git:https://github.com/scalecube/scalecube-commons.git
     </developerConnection>
     <tag>HEAD</tag>
   </scm>
 
-  <dependencyManagement>
-    <dependencies>
-    </dependencies>
-  </dependencyManagement>
-
-  <repositories>
-    <repository>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <id>oss.jfrog</id>
-      <name>jfrog</name>
-      <url>https://oss.jfrog.org/libs-release</url>
-    </repository>
-    <repository>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <id>bintray</id>
-      <name>bintray</name>
-      <url>https://jcenter.bintray.com</url>
-    </repository>
-    <repository>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <id>central</id>
-      <name>central</name>
-      <url>https://repo1.maven.org</url>
-    </repository>
-  </repositories>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <id>oss.jfrog</id>
-      <name>plugins-release</name>
-      <url>https://oss.jfrog.org/artifactory/plugins-release</url>
-    </pluginRepository>
-    <pluginRepository>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <id>central</id>
-      <name>bintray-plugins</name>
-      <url>https://jcenter.bintray.com</url>
-    </pluginRepository>
-  </pluginRepositories>
 </project>
