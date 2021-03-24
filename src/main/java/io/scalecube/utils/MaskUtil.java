@@ -46,7 +46,7 @@ public final class MaskUtil {
       return String.valueOf(map);
     }
     return map.entrySet().stream()
-        .collect(Collectors.toMap(Entry::getKey, entry -> MaskUtil.mask(entry.getValue())))
+        .collect(Collectors.toMap(Entry::getKey, entry -> mask(entry.getValue())))
         .toString();
   }
 }
