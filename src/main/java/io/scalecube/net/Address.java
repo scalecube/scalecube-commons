@@ -19,7 +19,7 @@ public final class Address {
   Address() {}
 
   private Address(String host, int port) {
-    this.host = convertIfLocalhost(host);
+    this.host = host;
     this.port = port;
   }
 
@@ -86,7 +86,7 @@ public final class Address {
    * @param host host string
    * @return local ip address if given host is localhost
    */
-  private static String convertIfLocalhost(String host) {
+  public static String convertIfLocalhost(String host) {
     String result;
     switch (host) {
       case "localhost":
