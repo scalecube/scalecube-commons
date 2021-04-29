@@ -6,7 +6,7 @@ import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public final class Address {
+public class Address {
 
   public static final Address NULL_ADDRESS = Address.create("nullhost", 0);
 
@@ -16,9 +16,9 @@ public final class Address {
   private int port;
 
   /** Instantiates empty address for deserialization purpose. */
-  Address() {}
+  protected Address() {}
 
-  private Address(String host, int port) {
+  protected Address(String host, int port) {
     this.host = convertIfLocalhost(host);
     this.port = port;
   }
