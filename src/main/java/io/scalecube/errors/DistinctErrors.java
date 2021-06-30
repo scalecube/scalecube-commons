@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class DistinctErrorLog {
+public class DistinctErrors {
   private final List<DistinctObservation> distinctObservations = new ArrayList<>();
   private final long evictionInterval;
 
   /** Constructor. */
-  public DistinctErrorLog() {
+  public DistinctErrors() {
     this(null);
   }
 
@@ -19,7 +19,7 @@ public class DistinctErrorLog {
    *
    * @param evictionInterval optional, how long consider incoming observation as unique.
    */
-  public DistinctErrorLog(Duration evictionInterval) {
+  public DistinctErrors(Duration evictionInterval) {
     this.evictionInterval =
         evictionInterval != null && evictionInterval.toMillis() > 0
             ? evictionInterval.toMillis()
