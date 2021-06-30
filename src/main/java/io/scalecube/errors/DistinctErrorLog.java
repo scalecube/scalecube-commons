@@ -27,30 +27,30 @@ public class DistinctErrorLog {
   }
 
   /**
-   * Return true If it is the first observation (or at least in the eviction time window) of this
-   * error type for a stack trace then a new entry will be created and kept.
+   * Return true if there is an observation (or at least in the eviction time window) of this error
+   * type for a stack trace. Otherwise a new entry will be created and kept.
    *
    * @param observation an error observation
-   * @return true if it's the first observation.
+   * @return true if such observation exists.
    */
-  public boolean isUnique(Throwable observation) {
+  public boolean contains(Throwable observation) {
+
     synchronized (this) {
       final long now = System.currentTimeMillis();
-
       DistinctObservation distinctObservation = find(now, distinctObservations, observation);
 
       if (distinctObservation == null) {
         distinctObservations.add(new DistinctObservation(observation, now + evictionInterval));
-        return true;
+        return false;
       }
 
       if (distinctObservation.deadline > now) {
         distinctObservation.resetDeadline(now + evictionInterval);
-        return true;
+        return false;
       }
     }
 
-    return false;
+    return true;
   }
 
   private static DistinctObservation find(
