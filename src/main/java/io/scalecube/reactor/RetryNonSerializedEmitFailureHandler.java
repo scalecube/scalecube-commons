@@ -6,7 +6,7 @@ import reactor.core.publisher.Sinks.EmitResult;
 
 public class RetryNonSerializedEmitFailureHandler implements EmitFailureHandler {
 
-  public static final RetryNonSerializedEmitFailureHandler RETRY_NOT_SERIALIZED =
+  public static final RetryNonSerializedEmitFailureHandler RETRY_NON_SERIALIZED =
       new RetryNonSerializedEmitFailureHandler();
 
   @Override
