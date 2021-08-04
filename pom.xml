@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -23,6 +25,37 @@
       </snapshots>
     </repository>
   </repositories>
+
+  <scm>
+    <url>https://github.com/scalecube/scalecube-commons</url>
+    <connection>scm:git:https://github.com/scalecube/scalecube-commons.git</connection>
+    <developerConnection>scm:git:https://github.com/scalecube/scalecube-commons.git
+    </developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+
+  <properties>
+    <reactor.version>2020.0.6</reactor.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.projectreactor</groupId>
+        <artifactId>reactor-bom</artifactId>
+        <version>${reactor.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.projectreactor</groupId>
+      <artifactId>reactor-core</artifactId>
+    </dependency>
+  </dependencies>
 
   <profiles>
     <profile>
@@ -63,13 +96,5 @@
       </build>
     </profile>
   </profiles>
-
-  <scm>
-    <url>https://github.com/scalecube/scalecube-commons</url>
-    <connection>scm:git:https://github.com/scalecube/scalecube-commons.git</connection>
-    <developerConnection>scm:git:https://github.com/scalecube/scalecube-commons.git
-    </developerConnection>
-    <tag>HEAD</tag>
-  </scm>
 
 </project>
