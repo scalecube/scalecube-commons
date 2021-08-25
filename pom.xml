@@ -33,7 +33,7 @@
   </scm>
 
   <properties>
-    <reactor.version>2020.0.6</reactor.version>
+    <reactor.version>2020.0.10</reactor.version>
   </properties>
 
   <dependencyManagement>
