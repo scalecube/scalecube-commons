@@ -19,4 +19,14 @@ public final class Runners {
     Signal.handle(new Signal("INT"), handler);
     Signal.handle(new Signal("TERM"), handler);
   }
+
+  /**
+   * Utility method to simply check if current thread is interrupted. If it is, then {@code
+   * IllegalStateException} is being thrown.
+   */
+  public static void checkInterrupted() {
+    if (Thread.currentThread().isInterrupted()) {
+      throw new IllegalStateException("Unexpected interrupt");
+    }
+  }
 }
