@@ -33,7 +33,7 @@
   </scm>
 
   <properties>
-    <reactor.version>2022.0.8</reactor.version>
+    <reactor.version>2020.0.32</reactor.version>
 
     <distributionManagement.url>https://maven.pkg.github.com/scalecube/scalecube-commons
     </distributionManagement.url>
