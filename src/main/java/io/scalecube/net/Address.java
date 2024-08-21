@@ -118,6 +118,26 @@ public final class Address {
     return port;
   }
 
+  /**
+   * Returns new address instance with the specified port.
+   *
+   * @param port port
+   * @return address instance
+   */
+  public Address port(int port) {
+    return Address.create(host, port);
+  }
+
+  /**
+   * Returns new address instance with applied port offset.
+   *
+   * @param portOffset portOffset
+   * @return address instance
+   */
+  public Address addPortOffset(int portOffset) {
+    return Address.create(host, port + portOffset);
+  }
+
   @Override
   public boolean equals(Object other) {
     if (this == other) {
