@@ -33,29 +33,8 @@
   </scm>
 
   <properties>
-    <reactor.version>2020.0.32</reactor.version>
-
     <distributionManagement.url>https://maven.pkg.github.com/scalecube/scalecube-commons
     </distributionManagement.url>
   </properties>
-
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>io.projectreactor</groupId>
-        <artifactId>reactor-bom</artifactId>
-        <version>${reactor.version}</version>
-        <type>pom</type>
-        <scope>import</scope>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
-
-  <dependencies>
-    <dependency>
-      <groupId>io.projectreactor</groupId>
-      <artifactId>reactor-core</artifactId>
-    </dependency>
-  </dependencies>
 
 </project>
