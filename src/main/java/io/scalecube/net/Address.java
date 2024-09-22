@@ -134,7 +134,7 @@ public final class Address {
    * @param portOffset portOffset
    * @return address instance
    */
-  public Address addPortOffset(int portOffset) {
+  public Address withPortOffset(int portOffset) {
     return Address.create(host, port + portOffset);
   }
 
